@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="description" content="My first webpage, with image">
+      <meta name="keywords" content="mths, website">
+      <meta name="author" content="Hayden Bronson">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Another Webpage</title>
+    </head>
+    <body>
+      <p>Enter an Integer</p>
+      <p>To Find if it is Negative or Positive</p>
+  <label for="Textbox">Integer:</label>
+  <input type="text" id="Integer" name="Integer" ><br><br>
+  <input type="button" value="Check" onclick="check_Integer()">
+  <script>
+      function check_Integer() {
+        let Integer;
+        
+        Integer  = parseInt(document.getElementById("Integer").value);
+        console.log(Integer);
+
+        if (Integer < 0) {
+          alert("The integer is negative");
+        }
+        else {
+          if (Integer > 0) {
+            alert("The integer is positive");
+          }
+          else {
+            if (isNaN(Integer)) {
+                alert("The integer is not a number");
+            }
+            else {
+              // MUST BE ZERO
+              alert("The integer is zero/nill");
+            }
+          }
+        }
+        
+      }
+  </script>
+    </body>
+</html>
